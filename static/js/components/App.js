@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Input from "./input/input-container"
-import Display from "./display/display-container"
-import Prompt from "./prompt/prompt-container"
+import Input from "./input/input-container";
+import Display from "./display/display-container";
+import Prompt from "./prompt/prompt-container";
+import Divider from "./divider/divider.jsx";
 import './App.css';
 
 class App extends Component {
@@ -9,8 +10,11 @@ class App extends Component {
     return (
       <div className="App">
         <Display/>
-        <Prompt/>
-        <Input/>
+        <div id="promptInputContainer">
+          <Prompt/>
+          <Divider/>
+          <Input/>
+        </div>
       </div>
     );
   }

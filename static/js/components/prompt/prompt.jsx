@@ -6,7 +6,7 @@ class Prompt extends Component {
   render(){
     return (
       <div>
-        <h3> what brings you here </h3>
+        <h3> {this.props.text[0]["promptComp"]}</h3>
       </div>
     )
   }

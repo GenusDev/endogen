@@ -1,0 +1,34 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+$svgheight: 500px;
+$svgwidth: 100px;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+
+h1 {
+  color:red;
+}
+
+#promptInputContainer{
+  display: flex;
+  text-align: center;
+  // align-items: flex-start;
+  // justify-content: center;
+  padding: 0 20%;
+}
+
+#dividerContainer {
+  width:20%;
+
+  .dividingLine{
+    stroke: grey;
+    stroke-width: .5px;
+
+  }
+
+}

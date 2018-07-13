@@ -1,0 +1,19 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333; }
+
+h1 {
+  color: red; }
+
+#promptInputContainer {
+  display: flex;
+  text-align: center;
+  padding: 0 20%; }
+
+#dividerContainer {
+  width: 20%; }
+  #dividerContainer .dividingLine {
+    stroke: grey;
+    stroke-width: .5px; }
+
+/*# sourceMappingURL=style.css.map */
