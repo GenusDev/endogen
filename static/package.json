@@ -48,6 +48,7 @@
     "redux": "^4.0.0",
     "sass": "^1.9.2",
     "scss": "^0.2.4",
+    "semantic-ui-react": "^0.82.0",
     "webpack": "^4.16.0"
   }
 }

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Input from './input'
+import PromptInput from './input'
 
 
 function mapStateToProps (state){
@@ -10,4 +10,4 @@ function mapStateToProps (state){
 }
 
 
-export default connect(mapStateToProps)(Input);
+export default connect(mapStateToProps)(PromptInput);
