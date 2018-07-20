@@ -1,4 +1,6 @@
 const webpack = require('webpack');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
+
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
@@ -10,6 +12,7 @@ const config = {
     resolve: {
         extensions: [".js", ".jsx", ".css"]
     },
+    devtool: "#eval-source-map",
     module: {
         rules: [
             {
@@ -24,14 +27,33 @@ const config = {
                     use: 'css-loader',
                 })
             },
+            // {
+            //     test: /\.(png|svg|otf|jpg|gif)$/,
+            //     use: 'file-loader'
+            // },
             {
-                test: /\.(png|svg|jpg|gif)$/,
-                use: 'file-loader'
-            }
+                test: /\.(png|woff|woff2|eot|svg)$/,
+                loader: 'url-loader?limit=100000'
+            },
+            {
+               test: /\.scss$/,
+               loader: 'style-loader!css-loader!sass-loader'
+           },
+           {
+               test: /\.(woff(2)?|ttf|eot|otf|svg)(\?v=\d+\.\d+\.\d+)?$/,
+               use: [{
+                   loader: 'file-loader',
+                   options: {
+                       name: '[name].[ext]',
+                       outputPath: 'fonts/'
+                   }
+               }]
+           }
         ]
     },
     plugins: [
-        new ExtractTextPlugin('styles.css'),
+        new ExtractTextPlugin('style.css'),
+        new LiveReloadPlugin()
     ]
 };
 

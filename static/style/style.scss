@@ -4,6 +4,12 @@ $primary-color: #333;
 $svgheight: 500px;
 $svgwidth: 100px;
 
+@font-face{
+  font-family: 'koz';
+  src: url('./fonts/Lato-Light.ttf') format("ttf");
+}
+
+
 body {
   font: 100% $font-stack;
   color: $primary-color;
@@ -11,7 +17,8 @@ body {
 
 
 h1 {
-  color:red;
+  color:green;
+  font-family: koz;
 }
 
 #promptInputContainer{

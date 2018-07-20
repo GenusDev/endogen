@@ -1,19 +1,46 @@
+@font-face {
+  font-family: "koz";
+  src: url("./fonts/KozGoPr6N-ExtraLight.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "lato";
+  src: url("./fonts/Lato-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "latoLight";
+  src: url("./fonts/Lato-Hairline.ttf") format("truetype");
+}
+
+
 body {
   font: 100% Helvetica, sans-serif;
-  color: #333; }
+  color: #333;
+}
 
 h1 {
-  color: red; }
+  color: grey;
+  font-family: 'koz';
+}
+
+h3 {
+  color: grey;
+  font-family: 'koz';
+}
 
 #promptInputContainer {
   display: flex;
   text-align: center;
-  padding: 0 20%; }
+  padding: 0 20%;
+}
 
 #dividerContainer {
-  width: 20%; }
-  #dividerContainer .dividingLine {
-    stroke: grey;
-    stroke-width: .5px; }
+  width: 20%;
+}
+#dividerContainer .dividingLine {
+  stroke: grey;
+  stroke-width: 0.5px;
+}
 
 /*# sourceMappingURL=style.css.map */

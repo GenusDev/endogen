@@ -36,14 +36,15 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^0.11.2",
+    "file-loader": "^1.1.11",
     "jquery": "^3.2.1",
-    "react": "^15.6.1",
+    "react": "^16.4.1",
     "react-bootstrap": "^0.31.0",
-    "react-dom": "^15.6.1",
+    "react-dom": "^16.4.1",
     "style-loader": "^0.18.2"
   },
   "dependencies": {
+    "lodash": "^4.17.10",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
     "sass": "^1.9.2",
