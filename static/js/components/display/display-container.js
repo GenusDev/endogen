@@ -4,6 +4,8 @@ import Display from './display'
 
 function mapStateToProps (state){
 
+
+
   return {
     text: state.text,
     sequence: state.sequence

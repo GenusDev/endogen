@@ -1,46 +1,42 @@
 @font-face {
   font-family: "koz";
-  src: url("./fonts/KozGoPr6N-ExtraLight.otf") format("truetype");
+  src: url("./fonts/KozGoPr6N-ExtraLight.otf") format("otf");
 }
-
-@font-face {
-  font-family: "lato";
-  src: url("./fonts/Lato-Light.ttf") format("truetype");
+#root {
+  position: relative;
+  top: 36%;
 }
-
-@font-face {
-  font-family: "latoLight";
-  src: url("./fonts/Lato-Hairline.ttf") format("truetype");
+#root .app div .IntroText #headerText {
+  font-family: koz;
+  color: blue;
 }
-
-
-body {
-  font: 100% Helvetica, sans-serif;
-  color: #333;
+#root .app div .IntroText #subheaderText {
+  font-family: koz;
 }
-
-h1 {
-  color: grey;
-  font-family: 'koz';
-}
-
-h3 {
-  color: grey;
-  font-family: 'koz';
-}
-
-#promptInputContainer {
+#root .app #promptInputContainer {
   display: flex;
   text-align: center;
-  padding: 0 20%;
+  align-items: center;
+  justify-content: center;
+  padding: 10% 20%;
 }
-
-#dividerContainer {
+#root .app #promptInputContainer #promptText {
+  width: 50%;
+  text-align: right;
+}
+#root .app #promptInputContainer #dividerContainer {
   width: 20%;
 }
-#dividerContainer .dividingLine {
+#root .app #promptInputContainer #dividerContainer .dividingLine {
   stroke: grey;
   stroke-width: 0.5px;
+}
+#root .app #promptInputContainer form {
+  text-align: left;
+  width: 50%;
+}
+#root .app #promptInputContainer form input {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

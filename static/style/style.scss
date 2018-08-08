@@ -1,41 +1,60 @@
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
 
-$svgheight: 500px;
-$svgwidth: 100px;
-
 @font-face{
   font-family: 'koz';
-  src: url('./fonts/Lato-Light.ttf') format("ttf");
+  src: url('./fonts/KozGoPr6N-ExtraLight.otf') format("otf");
 }
 
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
-}
+// body {
+//   font: 100% $font-stack;
+//   color: $primary-color;
+// }
 
 
-h1 {
-  color:green;
-  font-family: koz;
-}
+#root {
+  position: relative;
+  top: 36%;
+  .app {
+    div {
+      .IntroText {
+        #headerText {
+          font-family: koz;
+          color: blue;
+        }
+        #subheaderText{
+          font-family: koz;
+        }
+      }
+    }
 
-#promptInputContainer{
-  display: flex;
-  text-align: center;
-  // align-items: flex-start;
-  // justify-content: center;
-  padding: 0 20%;
-}
+    #promptInputContainer{
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      padding: 10% 20%;
 
-#dividerContainer {
-  width:20%;
+      #promptText{
+        width: 50%;
+        text-align: right;
 
-  .dividingLine{
-    stroke: grey;
-    stroke-width: .5px;
-
+      }
+      #dividerContainer {
+        width:20%;
+        .dividingLine{
+          stroke: grey;
+          stroke-width: .5px;
+        }
+      }
+      form{
+        text-align: left;
+        width: 50%;
+        input{
+          display: none;
+        }
+      }
+    }
   }
-
 }

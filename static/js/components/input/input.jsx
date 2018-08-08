@@ -59,7 +59,7 @@ class PromptInput extends Component {
   render(){
     return (
       <form onSubmit={this.handleSubmit}>
-          <Dropdown fluid search selection options={this.state.optionsArray} onChange={this.handleChange} />
+          <Dropdown autoFocus fluid search selection options={this.state.optionsArray} onChange={this.handleChange} />
           <input type="submit"></input>
       </form>
     )

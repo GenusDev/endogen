@@ -4,6 +4,9 @@ import Display from "./display/display-container";
 import Prompt from "./prompt/prompt-container";
 import Divider from "./divider/divider.jsx";
 import './App.css';
+import 'semantic-ui-css/semantic.min.css'
+
+
 
 class App extends Component {
 

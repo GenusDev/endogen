@@ -19,7 +19,7 @@ class Prompt extends Component {
 
   render(){
     return (
-      <div>
+      <div id='promptText'>
         <h3> {this.findPromptTextBasedOnSequence(this.props.sequence)}</h3>
       </div>
     )
