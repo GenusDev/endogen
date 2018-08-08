@@ -87,13 +87,17 @@ export default function () {
       "sequence": [0,2],
       "displayComp": "",
       "promptComp" : "great! to apply we need your",
-      "inputComp" : "email"
+      "inputComp" : {
+        "email" : {
+          "nextSequence": [0,1,1]
+        }
+      }
     },
     {
       "sequence": [0,3],
       "displayComp": "infoBox",
       "promptComp" : "neat, right?",
-      "inputComp" : ""
+      "inputComp" : "this is text"
     },
     {
       "sequence": [0,4],

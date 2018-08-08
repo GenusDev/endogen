@@ -9,6 +9,7 @@ const config = {
         path: __dirname + '/dist',
         filename: 'bundle.js',
     },
+    mode:"development",
     resolve: {
         extensions: [".js", ".jsx", ".css"]
     },

@@ -20,7 +20,7 @@ class PromptInput extends Component {
 
 
   findDataBasedOnSequenceAndChangeState(sequence){
-    var dataToInput = findDataBasedOnSequence(sequence,this.props.text)
+    var dataToInput = findDataBasedOnSequence(sequence,this.props.text) //input text directly instead of argument
     var newOptionsWithValuesForDropdown = structureTextDataForDropDown(dataToInput)
     this.setState({
       optionsArray: newOptionsWithValuesForDropdown
@@ -29,8 +29,8 @@ class PromptInput extends Component {
 
 
 
-
   componentDidMount(){
+    console.log("has mounted")
     this.findDataBasedOnSequenceAndChangeState(this.props.sequence)
   }
 
