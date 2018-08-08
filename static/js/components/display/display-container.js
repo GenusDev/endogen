@@ -5,7 +5,8 @@ import Display from './display'
 function mapStateToProps (state){
 
   return {
-    text: state.text
+    text: state.text,
+    sequence: state.sequence
   };
 }
 
