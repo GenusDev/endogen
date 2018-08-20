@@ -22,8 +22,6 @@ class Display extends Component {
   figureOutWhatToDisplay(){
     var displayDescription = this.findDisplayTextBasedOnSequence(this.props.sequence)
 
-    console.log(displayDescription)
-
     var displayComponent = displayComponents[displayDescription]
     return displayComponent
 

@@ -1,16 +1,30 @@
 $font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
+$promptHeight: 400px;
+$promptWidth: 800px;
+$emphasisColor: rgb(62, 204, 203);
 
 @font-face{
   font-family: 'koz';
-  src: url('./fonts/KozGoPr6N-ExtraLight.otf') format("otf");
+  src: url('./fonts/Lato-Hairline.ttf') format("truetype");
+
 }
 
+@font-face{
+  font-family: 'Lato-Light';
+  src: url('./fonts/Lato-Light.ttf') format("truetype");
+
+}
+
+
+// [contenteditable] {
+//   caret-color: red;
+// }
 
 // body {
 //   font: 100% $font-stack;
 //   color: $primary-color;
 // }
+
 
 
 #root {
@@ -21,38 +35,132 @@ $primary-color: #333;
       .IntroText {
         #headerText {
           font-family: koz;
-          color: blue;
+          font-size: 60px;
+          color: grey;
+          font-weight: lighter;
+          margin: 0px;
         }
         #subheaderText{
           font-family: koz;
+          color: rgba(128, 128, 128, 0.5);
+          font-size: 50px;
+          opacity: 40%;
+          font-weight: lighter;
+          margin: 0;
         }
       }
     }
 
-    #promptInputContainer{
-      display: flex;
+    .promptInputContainer{
+      display: grid;
       text-align: center;
       align-items: center;
       justify-content: center;
       padding: 10% 20%;
+      width: 100%;
 
-      #promptText{
-        width: 50%;
-        text-align: right;
+      .promptText{
+        grid-column-start: 1;
+        width: $promptWidth;
+        height: $promptHeight;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        h3{
+          font-family: koz;
+          font-size: 30px;
+        }
 
       }
-      #dividerContainer {
-        width:20%;
+      .dividerContainer {
+        grid-column-start: 2;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        height: $promptHeight;
         .dividingLine{
           stroke: grey;
           stroke-width: .5px;
         }
       }
-      form{
+
+      .inputContainer{
+        width: $promptWidth;
+        height: $promptHeight;
+        grid-column: 3;
+        display: grid;
+        align-items: center;
         text-align: left;
-        width: 50%;
-        input{
-          display: none;
+        position: relative;
+        // transform: translate(0,20%);
+        .FormDivContainer{
+          display: grid;
+          grid-template-columns: repeat(6, 100px);
+          width: 100%;
+          .formDiv{
+            grid-column: 1;
+            display: flex;
+            vertical-align: middle;
+            position: relative;
+            height: $promptHeight/2+16;
+            transform: translate(0,1%);
+            form{
+              display:flex;
+              // transform: translate(0,-19%);
+              align-items: flex-end;
+              height: 100%;
+              width: 100%;
+              ::placeholder{
+                opacity: .5
+              }
+              input {
+                caret-color: transparent;
+                border: 1px rgba(34,36,38,.15);
+                font-size: 30px;
+                color: $emphasisColor;
+                font-family: Lato-Light;
+                // transform: translate(0, 5%);
+                position: absolute;
+              }
+              input::selection {
+                background-color: $emphasisColor;
+                color: #fff;
+              }
+            }
+          }
+          .autoCompDiv{
+            grid-column-start: 2;
+            grid-column-end: 6;
+            align-self: flex-end;
+            justify-self: flex-start;
+            z-index: 100;
+            .autoCompText{
+              font-size: 30px;
+              font-family: koz;
+              color: rgba(128, 128, 128, .4);
+            }
+          }
+        }
+
+        .listdiv{
+          visibility: hidden;
+          height: 184px;
+          width: 800px;
+          transform: translate(-6%,10%);
+          ul{
+            li{
+              margin: 0 0 15px 0;
+              list-style-type: none;
+              font-size: 30px;
+              font-family: koz;
+              color: rgba(128, 128, 128, .4);
+            }
+          }
+        }
+        input:focus{
+            outline: none;
         }
       }
     }

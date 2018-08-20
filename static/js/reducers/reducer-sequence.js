@@ -2,7 +2,7 @@ import merge from 'lodash/merge';
 import NEXTSEQUENCE from '../actions/sequence-actions';
 
 
-const sequenceReducer = (state='0',action) =>{
+const sequenceReducer = (state="0",action) =>{
   Object.freeze(state);
   switch(action.type){
     case "NEXTSEQUENCE":

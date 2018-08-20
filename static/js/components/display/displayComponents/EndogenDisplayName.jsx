@@ -9,7 +9,7 @@ class Display extends Component {
     // const newOptionsWithValuesForDisplay = findDataBasedOnSequence(currentSequence,this.props.text)
     // debugger
     return (
-      <div class="IntroText" >
+      <div className="IntroText" >
         <h1 id="headerText"> ENDOGEN </h1>
         <h1 id="subheaderText"> investment co-op </h1>
       </div>

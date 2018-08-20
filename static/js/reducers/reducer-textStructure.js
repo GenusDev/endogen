@@ -5,16 +5,16 @@ export default function () {
       "displayComp": "EndogenDisplayName",
       "promptComp" : "would you like to",
       "inputComp" : {
-        "( l )og-in" : {
+        "( l )og-in ?" : {
           "nextSequence": [0,1]
         },
-        "( s )ign-up" : {
+        "( s )ign-up ?" : {
           "nextSequence": [0,2]
         },
-        "( g )et more info": {
+        "( g )et more info ?": {
           "nextSequence": [0,3]
         },
-        "( c )heck share price?" : {
+        "( c )heck share price ?" : {
           "nextSequence": [0,4]
         }
       }
@@ -45,10 +45,10 @@ export default function () {
       "displayComp": "",
       "promptComp" : "those didn’t work,",
       "inputComp" : {
-        "( t )ry your password again?" : {
+        "( t )ry your password again ?" : {
           "nextSequence": [0,1,1,1,1],
         },
-        "( r )eset?" : {
+        "( r )eset ?" : {
           "nextSequence": [0,1,1,1,2],
         }
       }

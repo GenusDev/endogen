@@ -9,7 +9,7 @@ const config = {
         path: __dirname + '/dist',
         filename: 'bundle.js',
     },
-    // mode:"development"
+    mode:"development",
     resolve: {
         extensions: [".js", ".jsx", ".css"]
     },
@@ -41,15 +41,24 @@ const config = {
                loader: 'style-loader!css-loader!sass-loader'
            },
            {
-               test: /\.(woff(2)?|ttf|eot|otf|svg)(\?v=\d+\.\d+\.\d+)?$/,
-               use: [{
-                   loader: 'file-loader',
-                   options: {
-                       name: '[name].[ext]',
-                       outputPath: 'fonts/'
-                   }
-               }]
-           }
+                test: /\.(ttf|otf|eot|woff|woff2)$/,
+                use: {
+                  loader: "file-loader",
+                  options: {
+                    name: "fonts/[name].[ext]",
+                  },
+                },
+            }
+           // {
+           //     test: /\.(woff(2)?|ttf|eot|otf|svg)(\?v=\d+\.\d+\.\d+)?$/,
+           //     use: [{
+           //         loader: 'file-loader',
+           //         options: {
+           //             name: "fonts/[name].[ext]",
+           //             outputPath: 'fonts/'
+           //         }
+           //     }]
+           // }
         ]
     },
     plugins: [

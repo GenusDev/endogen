@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+ import React, { Component } from 'react';
 import Input from "./input/input-container";
 import Display from "./display/display-container";
 import Prompt from "./prompt/prompt-container";
@@ -15,8 +15,8 @@ class App extends Component {
     return (
       <div className="App">
         <Display/>
-        <div id="promptInputContainer">
-          <Prompt/>
+        <div className="promptInputContainer">
+          <Prompt />
           <Divider/>
           <Input/>
         </div>

@@ -1,6 +1,10 @@
 @font-face {
   font-family: "koz";
-  src: url("./fonts/KozGoPr6N-ExtraLight.otf") format("otf");
+  src: url("./fonts/Lato-Hairline.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato-Light";
+  src: url("./fonts/Lato-Light.ttf") format("truetype");
 }
 #root {
   position: relative;
@@ -8,35 +12,122 @@
 }
 #root .app div .IntroText #headerText {
   font-family: koz;
-  color: blue;
+  font-size: 60px;
+  color: grey;
+  font-weight: lighter;
+  margin: 0px;
 }
 #root .app div .IntroText #subheaderText {
   font-family: koz;
+  color: rgba(128, 128, 128, 0.5);
+  font-size: 50px;
+  opacity: 40%;
+  font-weight: lighter;
+  margin: 0;
 }
-#root .app #promptInputContainer {
-  display: flex;
+#root .app .promptInputContainer {
+  display: grid;
   text-align: center;
   align-items: center;
   justify-content: center;
   padding: 10% 20%;
+  width: 100%;
 }
-#root .app #promptInputContainer #promptText {
-  width: 50%;
-  text-align: right;
+#root .app .promptInputContainer .promptText {
+  grid-column-start: 1;
+  width: 800px;
+  height: 400px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
-#root .app #promptInputContainer #dividerContainer {
-  width: 20%;
+#root .app .promptInputContainer .promptText h3 {
+  font-family: koz;
+  font-size: 30px;
 }
-#root .app #promptInputContainer #dividerContainer .dividingLine {
+#root .app .promptInputContainer .dividerContainer {
+  grid-column-start: 2;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  height: 400px;
+}
+#root .app .promptInputContainer .dividerContainer .dividingLine {
   stroke: grey;
   stroke-width: 0.5px;
 }
-#root .app #promptInputContainer form {
+#root .app .promptInputContainer .inputContainer {
+  width: 800px;
+  height: 400px;
+  grid-column: 3;
+  display: grid;
+  align-items: center;
   text-align: left;
-  width: 50%;
+  position: relative;
 }
-#root .app #promptInputContainer form input {
-  display: none;
+#root .app .promptInputContainer .inputContainer .FormDivContainer {
+  display: grid;
+  grid-template-columns: repeat(6, 100px);
+  width: 100%;
+}
+#root .app .promptInputContainer .inputContainer .FormDivContainer .formDiv {
+  grid-column: 1;
+  display: flex;
+  vertical-align: middle;
+  position: relative;
+  height: 216px;
+  transform: translate(0, 1%);
+}
+#root .app .promptInputContainer .inputContainer .FormDivContainer .formDiv form {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+}
+#root .app .promptInputContainer .inputContainer .FormDivContainer .formDiv form ::placeholder {
+  opacity: 0.5;
+}
+#root .app .promptInputContainer .inputContainer .FormDivContainer .formDiv form input {
+  caret-color: transparent;
+  border: 1px rgba(34, 36, 38, 0.15);
+  font-size: 30px;
+  color: #3ecccb;
+  font-family: Lato-Light;
+  position: absolute;
+}
+#root .app .promptInputContainer .inputContainer .FormDivContainer .formDiv form input::selection {
+  background-color: #3ecccb;
+  color: #fff;
+}
+#root .app .promptInputContainer .inputContainer .FormDivContainer .autoCompDiv {
+  grid-column-start: 2;
+  grid-column-end: 6;
+  align-self: flex-end;
+  justify-self: flex-start;
+  z-index: 100;
+}
+#root .app .promptInputContainer .inputContainer .FormDivContainer .autoCompDiv .autoCompText {
+  font-size: 30px;
+  font-family: koz;
+  color: rgba(128, 128, 128, 0.4);
+}
+#root .app .promptInputContainer .inputContainer .listdiv {
+  visibility: hidden;
+  height: 184px;
+  width: 800px;
+  transform: translate(-6%, 10%);
+}
+#root .app .promptInputContainer .inputContainer .listdiv ul li {
+  margin: 0 0 15px 0;
+  list-style-type: none;
+  font-size: 30px;
+  font-family: koz;
+  color: rgba(128, 128, 128, 0.4);
+}
+#root .app .promptInputContainer .inputContainer input:focus {
+  outline: none;
 }
 
 /*# sourceMappingURL=style.css.map */

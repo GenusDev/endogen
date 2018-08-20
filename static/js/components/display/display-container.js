@@ -8,7 +8,8 @@ function mapStateToProps (state){
 
   return {
     text: state.text,
-    sequence: state.sequence
+    sequence: state.sequence,
+    isWriting: state.isWriting
   };
 }
 
